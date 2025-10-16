@@ -33,8 +33,6 @@ const makeGrid = function(numberOfDivs){
         div.classList.add('divOfGrid');
         div.style.width = `${totalWidthContainer / numberOfDivs}px`;
         div.style.height = `${totalHeightContainer / numberOfDivs}px`;
-        div.style.borderRight = '1px solid black';
-        div.style.borderBottom = '1px solid black';
         container.appendChild(div);
 
     }
