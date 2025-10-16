@@ -18,6 +18,17 @@ gridDimentionButton.addEventListener('click', ()=>{
 eraseBorderButton.addEventListener('click', eraseBorder);
 showBorderButton.addEventListener('click', showBorder);
 
+const addHoverEffect = () =>{
+    const divsOfGrid = document.querySelectorAll('.divOfGrid');
+    divsOfGrid.forEach(divOfGrid => {
+        divOfGrid.addEventListener('mouseenter', event =>{
+            const blueColor = '#0000FF';
+            //event.currentTarget.classList.add('hoveredBlueDiv');
+            event.currentTarget.style.backgroundColor = blueColor;
+        });
+    });
+}
+
 const makeGrid = function(numberOfDivs){
     for(i = 0; i < (numberOfDivs * numberOfDivs); i++){
         const div = document.createElement('div');
@@ -27,9 +38,11 @@ const makeGrid = function(numberOfDivs){
         div.style.borderRight = '1px solid black';
         div.style.borderBottom = '1px solid black';
         container.appendChild(div);
-    }
-}
 
+    }
+    addHoverEffect();
+}
+ 
 function eraseGrid(){
     const divsToErase = document.querySelectorAll('.divOfGrid');
     divsToErase.forEach(divToErase => {
