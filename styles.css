@@ -2,8 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 #container{
-    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid black;
+    max-width: 962px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
 }
