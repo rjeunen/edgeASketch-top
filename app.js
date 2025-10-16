@@ -1,5 +1,7 @@
 const container = document.querySelector('#container');
 const gridDimentionButton = document.querySelector('#gridDimentionButton');
+const eraseBorderButton = document.querySelector('#eraseBorderButton');
+const showBorderButton = document.querySelector('#showBorderButton');
 
 const totalWidthContainer = 960;
 const totalHeightContainer = 600;
@@ -12,6 +14,9 @@ gridDimentionButton.addEventListener('click', ()=>{
     eraseGrid();
     makeGrid(newGridSize);
 });
+
+eraseBorderButton.addEventListener('click', eraseBorder);
+showBorderButton.addEventListener('click', showBorder);
 
 const makeGrid = function(numberOfDivs){
     for(i = 0; i < (numberOfDivs * numberOfDivs); i++){
@@ -32,5 +37,20 @@ function eraseGrid(){
     });
 }
 
+function eraseBorder(){
+    const divsWithBorder = document.querySelectorAll('.divOfGrid');
+    divsWithBorder.forEach(divWithBorder => {
+        divWithBorder.style.border = 0;
+    })
+}
+
+function showBorder(){
+    const divsWithoutBorder = document.querySelectorAll('.divOfGrid');
+    divsWithoutBorder.forEach(divWithoutBorder =>{
+        divWithoutBorder.style.borderBottom = `1px solid black`;
+        divWithoutBorder.style.borderRight = `1px solid black`;
+    })
+}
+
 //refreshing the page - app starts with a 16 by 16 grid.
-makeGrid(32);
+makeGrid(16);
