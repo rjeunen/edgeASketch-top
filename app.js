@@ -6,7 +6,7 @@ const totalHeightContainer = 600;
 
 gridDimentionButton.addEventListener('click', ()=>{
     let newGridSize = parseInt(prompt('Enter a gridSize'));
-    while(newGridSize > 100){
+    while(newGridSize > 100 || newGridSize < 2 || isNaN(newGridSize)){
         newGridSize = parseInt(prompt('Enter a gridSize'));
     }
     eraseGrid();
