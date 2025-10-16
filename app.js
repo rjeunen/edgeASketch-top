@@ -22,9 +22,7 @@ const addHoverEffect = () =>{
     const divsOfGrid = document.querySelectorAll('.divOfGrid');
     divsOfGrid.forEach(divOfGrid => {
         divOfGrid.addEventListener('mouseenter', event =>{
-            const blueColor = '#0000FF';
-            //event.currentTarget.classList.add('hoveredBlueDiv');
-            event.currentTarget.style.backgroundColor = blueColor;
+            event.currentTarget.classList.add('hoveredBlueDiv');
         });
     });
 }
