@@ -14,3 +14,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.hoveredBlueDiv{
+    background-color: blue;
+}
